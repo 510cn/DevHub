@@ -51,7 +51,7 @@ async def generate_requirement_stream(topic: str):
     try:
         response = client.chat.completions.create(
             model="deepseek-chat",
-            messages=[
+            messages=[f
                 {"role": "system", "content": "你是一个专业的系统分析师"},
                 {"role": "user", "content": prompt}
             ],
